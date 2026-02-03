@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/d3v0psdan/vscode-ext-flux-ui"
+    "url": "https://github.com/d3v0psdan/flux-ui-v2-extension"
   },
   "icon": "images/icon.png",
   "engines": {

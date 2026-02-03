@@ -24,7 +24,7 @@ IntelliSense and autocomplete for [Flux UI](https://fluxui.dev) v2.x components 
 
 ### From VSIX
 
-1. Download the `.vsix` file from [Releases](https://github.com/d3v0psdan/vscode-ext-flux-ui/releases)
+1. Download the `.vsix` file from [Releases](https://github.com/d3v0psdan/flux-ui-v2-extension/releases)
 2. In VS Code, open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
 3. Run "Extensions: Install from VSIX..."
 4. Select the downloaded file
