@@ -1,6 +1,10 @@
 # Flux UI v2 - VS Code Extension
 
+![Flux UI Extension Banner](images/extension-banner.PNG)
+
 IntelliSense and autocomplete for [Flux UI](https://fluxui.dev) v2.x components in Laravel Blade files.
+
+![Extension Showcase](images/extension-showcase.png)
 
 ## Features
 
