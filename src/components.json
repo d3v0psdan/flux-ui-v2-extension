@@ -1,0 +1,1314 @@
+[
+  {
+    "name": "accordion",
+    "selfClosing": false,
+    "description": "Collapse and expand sections of content. Perfect for FAQs and content-heavy areas.",
+    "isPro": true,
+    "props": [
+      { "name": "variant", "type": "string", "default": "null", "values": ["reverse"], "description": "When set to 'reverse', displays the icon before the heading instead of after it" },
+      { "name": "transition", "type": "boolean", "default": "false", "description": "If true, enables expanding transitions for smoother interactions" },
+      { "name": "exclusive", "type": "boolean", "default": "false", "description": "If true, only one accordion item can be expanded at a time" }
+    ]
+  },
+  {
+    "name": "accordion.item",
+    "selfClosing": false,
+    "description": "An individual accordion item.",
+    "isPro": true,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "Shorthand for flux:accordion.heading content" },
+      { "name": "expanded", "type": "boolean", "default": "false", "description": "If true, the accordion item is expanded by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "If true, the accordion item cannot be expanded or collapsed" }
+    ]
+  },
+  {
+    "name": "accordion.heading",
+    "selfClosing": false,
+    "description": "The heading of an accordion item.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "accordion.content",
+    "selfClosing": false,
+    "description": "The content to display when the accordion item is expanded.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "autocomplete",
+    "selfClosing": false,
+    "description": "Enhance an input field with autocomplete suggestions.",
+    "isPro": true,
+    "props": [
+      { "name": "type", "type": "string", "default": "'text'", "values": ["text", "email", "password", "file", "date"], "description": "HTML input type" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the input" },
+      { "name": "description", "type": "string", "default": "null", "description": "Descriptive text displayed below the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text displayed when the input is empty" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "lg"], "description": "Size of the input" },
+      { "name": "variant", "type": "string", "default": "'outline'", "values": ["filled", "outline"], "description": "Visual style variant" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "If true, prevents user interaction with the input" },
+      { "name": "readonly", "type": "boolean", "default": "false", "description": "If true, makes the input read-only" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "If true, applies error styling to the input" },
+      { "name": "multiple", "type": "boolean", "default": "false", "description": "For file inputs, allows selecting multiple files" },
+      { "name": "mask", "type": "string", "default": "null", "description": "Input mask pattern using Alpine's mask plugin" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon displayed at the start of the input" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Name of the icon displayed at the end of the input" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut hint displayed at the end of the input" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "If true, displays a clear button when the input has content" },
+      { "name": "copyable", "type": "boolean", "default": "false", "description": "If true, displays a copy button to copy the input's content" },
+      { "name": "viewable", "type": "boolean", "default": "false", "description": "For password inputs, displays a toggle to show/hide the password" },
+      { "name": "as", "type": "string", "default": "'input'", "values": ["button", "input"], "description": "Render the input as a different element" }
+    ]
+  },
+  {
+    "name": "autocomplete.item",
+    "selfClosing": false,
+    "description": "An item in the autocomplete dropdown.",
+    "isPro": true,
+    "props": [
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "If present or true, the item cannot be selected" }
+    ]
+  },
+  {
+    "name": "avatar",
+    "selfClosing": true,
+    "description": "Display an image or initials as an avatar.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "description": "User's name to display as initials" },
+      { "name": "src", "type": "string", "default": "null", "description": "URL to the image to display as avatar" },
+      { "name": "initials", "type": "string", "default": "null", "description": "Custom initials to display when no src is provided" },
+      { "name": "alt", "type": "string", "default": "null", "description": "Alternative text for the avatar image" },
+      { "name": "size", "type": "string", "default": "null", "values": ["xs", "sm", "base", "lg", "xl"], "description": "Size of the avatar" },
+      { "name": "color", "type": "string", "default": "'zinc'", "values": ["zinc", "red", "orange", "amber", "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose", "auto"], "description": "Background color" },
+      { "name": "color:seed", "type": "string", "default": "null", "description": "Value used when color='auto' to generate consistent colors" },
+      { "name": "circle", "type": "boolean", "default": "false", "description": "If true, makes the avatar fully circular" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display instead of an image or initials" },
+      { "name": "icon:variant", "type": "string", "default": "'solid'", "values": ["outline", "solid"], "description": "Icon variant" },
+      { "name": "tooltip", "type": "string", "default": "null", "description": "Text to display in a tooltip when hovering" },
+      { "name": "tooltip:position", "type": "string", "default": "'top'", "values": ["top", "right", "bottom", "left"], "description": "Position of the tooltip" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Content to display as a badge" },
+      { "name": "badge:color", "type": "string", "default": "null", "description": "Color of the badge" },
+      { "name": "badge:circle", "type": "boolean", "default": "false", "description": "If true, makes the badge fully circular" },
+      { "name": "badge:position", "type": "string", "default": "'bottom right'", "values": ["top left", "top right", "bottom left", "bottom right"], "description": "Position of the badge" },
+      { "name": "badge:variant", "type": "string", "default": "'solid'", "values": ["solid", "outline"], "description": "Variant of the badge" },
+      { "name": "as", "type": "string", "default": "'div'", "values": ["button", "div"], "description": "Element to render as" },
+      { "name": "href", "type": "string", "default": "null", "description": "URL to link to, making the avatar a link element" }
+    ]
+  },
+  {
+    "name": "avatar.group",
+    "selfClosing": false,
+    "description": "Group multiple avatars together.",
+    "isPro": false,
+    "props": [
+      { "name": "class", "type": "string", "default": "null", "description": "CSS classes to apply to the group" }
+    ]
+  },
+  {
+    "name": "badge",
+    "selfClosing": false,
+    "description": "Highlight information like status, category, or count.",
+    "isPro": false,
+    "props": [
+      { "name": "color", "type": "string", "default": "'zinc'", "values": ["zinc", "red", "orange", "amber", "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose"], "description": "Badge color" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "lg"], "description": "Badge size" },
+      { "name": "rounded", "type": "boolean", "default": "false", "description": "If true, makes the badge fully rounded" },
+      { "name": "variant", "type": "string", "default": "null", "values": ["solid"], "description": "Badge style variant" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display before the badge text" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Name of the icon to display after the badge text" },
+      { "name": "icon:variant", "type": "string", "default": "'mini'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" },
+      { "name": "as", "type": "string", "default": "'div'", "values": ["button", "div"], "description": "HTML element to render as" },
+      { "name": "inset", "type": "string", "default": "null", "values": ["top", "bottom", "left", "right"], "description": "Add negative margins" }
+    ]
+  },
+  {
+    "name": "badge.close",
+    "selfClosing": true,
+    "description": "Close button for dismissible badges.",
+    "isPro": false,
+    "props": [
+      { "name": "icon", "type": "string", "default": "'x-mark'", "description": "Name of the icon to display" },
+      { "name": "icon:variant", "type": "string", "default": "'mini'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" }
+    ]
+  },
+  {
+    "name": "brand",
+    "selfClosing": false,
+    "description": "Display your company or application's logo and name.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "description": "Company or application name to display next to the logo" },
+      { "name": "logo", "type": "string", "default": "null", "description": "URL to the image to display as logo" },
+      { "name": "alt", "type": "string", "default": "null", "description": "Alternative text for the logo" },
+      { "name": "href", "type": "string", "default": "'/'", "description": "URL to navigate to when the brand is clicked" }
+    ]
+  },
+  {
+    "name": "breadcrumbs",
+    "selfClosing": false,
+    "description": "Help users navigate and understand their place within your application.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "breadcrumbs.item",
+    "selfClosing": false,
+    "description": "An individual breadcrumb link.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "URL the breadcrumb item links to" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display" },
+      { "name": "icon:variant", "type": "string", "default": "'mini'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" },
+      { "name": "separator", "type": "string", "default": "'chevron-right'", "description": "Name of the icon to display as the separator" }
+    ]
+  },
+  {
+    "name": "button",
+    "selfClosing": false,
+    "description": "A powerful and composable button component for your application.",
+    "isPro": false,
+    "props": [
+      { "name": "as", "type": "string", "default": "'button'", "values": ["button", "div"], "description": "HTML tag to render" },
+      { "name": "href", "type": "string", "default": "null", "description": "URL to link to when used as anchor tag" },
+      { "name": "type", "type": "string", "default": "'button'", "values": ["button", "submit"], "description": "HTML type attribute" },
+      { "name": "variant", "type": "string", "default": "'outline'", "values": ["outline", "primary", "filled", "danger", "ghost", "subtle"], "description": "Visual style" },
+      { "name": "size", "type": "string", "default": "'base'", "values": ["base", "sm", "xs"], "description": "Size" },
+      { "name": "color", "type": "string", "default": "null", "description": "Color of the primary button (Tailwind color names)" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon at the start" },
+      { "name": "icon:variant", "type": "string", "default": "'micro'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon style" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Name of the icon at the end" },
+      { "name": "square", "type": "boolean", "default": "false", "description": "If true, makes the button square" },
+      { "name": "align", "type": "string", "default": "'center'", "values": ["start", "center", "end"], "description": "Content alignment" },
+      { "name": "inset", "type": "string", "default": "null", "values": ["top", "bottom", "left", "right"], "description": "Add negative margins" },
+      { "name": "loading", "type": "boolean", "default": "null", "description": "Show loading spinner with wire:click or type='submit'" },
+      { "name": "tooltip", "type": "string", "default": "null", "description": "Tooltip text when hovering" },
+      { "name": "tooltip:position", "type": "string", "default": "'top'", "values": ["top", "bottom", "left", "right"], "description": "Tooltip position" },
+      { "name": "tooltip:kbd", "type": "string", "default": "null", "description": "Keyboard shortcut in tooltip" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut hint" }
+    ]
+  },
+  {
+    "name": "button.group",
+    "selfClosing": false,
+    "description": "Group multiple buttons together.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "calendar",
+    "selfClosing": true,
+    "description": "A full-featured calendar component for date selection.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "string", "default": "null", "description": "Selected date(s). Format depends on mode" },
+      { "name": "mode", "type": "string", "default": "'single'", "values": ["single", "multiple", "range"], "description": "Selection mode" },
+      { "name": "min", "type": "string", "default": "null", "description": "Earliest selectable date" },
+      { "name": "max", "type": "string", "default": "null", "description": "Latest selectable date" },
+      { "name": "size", "type": "string", "default": "'base'", "values": ["xs", "sm", "base", "lg", "xl", "2xl"], "description": "Calendar size" },
+      { "name": "start-day", "type": "number", "default": "null", "description": "Day of week to start (0-6)" },
+      { "name": "months", "type": "number", "default": "1", "description": "Number of months to display" },
+      { "name": "min-range", "type": "number", "default": "null", "description": "Minimum days in range mode" },
+      { "name": "max-range", "type": "number", "default": "null", "description": "Maximum days in range mode" },
+      { "name": "open-to", "type": "string", "default": "null", "description": "Date the calendar opens to" },
+      { "name": "force-open-to", "type": "boolean", "default": "false", "description": "Force open to open-to date" },
+      { "name": "navigation", "type": "boolean", "default": "true", "description": "Show month navigation controls" },
+      { "name": "static", "type": "boolean", "default": "false", "description": "Make calendar non-interactive" },
+      { "name": "multiple", "type": "boolean", "default": "false", "description": "Enable multiple date selection" },
+      { "name": "week-numbers", "type": "boolean", "default": "false", "description": "Display week numbers" },
+      { "name": "selectable-header", "type": "boolean", "default": "false", "description": "Show month/year dropdowns" },
+      { "name": "with-today", "type": "boolean", "default": "false", "description": "Show today button" },
+      { "name": "with-inputs", "type": "boolean", "default": "false", "description": "Show date inputs" },
+      { "name": "locale", "type": "string", "default": "null", "description": "Locale for the calendar" }
+    ]
+  },
+  {
+    "name": "callout",
+    "selfClosing": false,
+    "description": "Highlight important information or guide users toward key actions.",
+    "isPro": false,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon displayed" },
+      { "name": "icon:variant", "type": "string", "default": "null", "values": ["outline", "solid", "mini", "micro"], "description": "Variant of the icon" },
+      { "name": "variant", "type": "string", "default": "'secondary'", "values": ["secondary", "success", "warning", "danger"], "description": "Callout style variant" },
+      { "name": "color", "type": "string", "default": "null", "description": "Custom color (e.g., red, blue)" },
+      { "name": "inline", "type": "boolean", "default": "false", "description": "If true, actions appear inline" },
+      { "name": "heading", "type": "string", "default": "null", "description": "Shorthand for flux:callout.heading" },
+      { "name": "text", "type": "string", "default": "null", "description": "Shorthand for flux:callout.text" }
+    ]
+  },
+  {
+    "name": "callout.heading",
+    "selfClosing": false,
+    "description": "Heading for a callout.",
+    "isPro": false,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Moves the icon inside the heading" },
+      { "name": "icon:variant", "type": "string", "default": "null", "values": ["outline", "solid", "mini", "micro"], "description": "Variant of the icon" }
+    ]
+  },
+  {
+    "name": "callout.text",
+    "selfClosing": false,
+    "description": "Text content inside a callout.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "callout.link",
+    "selfClosing": false,
+    "description": "Link inside a callout.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "The URL the link points to" },
+      { "name": "external", "type": "boolean", "default": "false", "description": "If true, opens in new tab" }
+    ]
+  },
+  {
+    "name": "card",
+    "selfClosing": false,
+    "description": "A container for related content, such as a form, alert, or data list.",
+    "isPro": false,
+    "props": [
+      { "name": "size", "type": "string", "default": "null", "values": ["sm"], "description": "Size of the card" }
+    ]
+  },
+  {
+    "name": "chart",
+    "selfClosing": false,
+    "description": "Display data visualizations with line charts, area charts, and more.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "array", "default": "null", "description": "Array of data points for the chart" },
+      { "name": "curve", "type": "string", "default": "'smooth'", "values": ["smooth", "none"], "description": "Line curve type" }
+    ]
+  },
+  {
+    "name": "chart.svg",
+    "selfClosing": false,
+    "description": "SVG container for chart visualization.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "chart.line",
+    "selfClosing": true,
+    "description": "Line visualization for chart.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "chart.area",
+    "selfClosing": true,
+    "description": "Area visualization for chart.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "chart.point",
+    "selfClosing": true,
+    "description": "Point visualization for chart.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "chart.axis",
+    "selfClosing": true,
+    "description": "Axis configuration for chart.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "checkbox",
+    "selfClosing": true,
+    "description": "Select one or multiple options from a set.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed next to the checkbox" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text below the checkbox" },
+      { "name": "value", "type": "string", "default": "null", "description": "Value when used in a group" },
+      { "name": "checked", "type": "boolean", "default": "false", "description": "Checked by default" },
+      { "name": "indeterminate", "type": "boolean", "default": "false", "description": "Indeterminate state (dash)" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon for cards variant" }
+    ]
+  },
+  {
+    "name": "checkbox.group",
+    "selfClosing": false,
+    "description": "Group multiple checkboxes together.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label above the group" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text below the label" },
+      { "name": "variant", "type": "string", "default": "'default'", "values": ["default", "cards", "pills", "buttons"], "description": "Layout variant (cards/pills/buttons are Pro)" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Disables all checkboxes" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Error styling for all" }
+    ]
+  },
+  {
+    "name": "checkbox.all",
+    "selfClosing": true,
+    "description": "Select all checkbox for a group.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" }
+    ]
+  },
+  {
+    "name": "command",
+    "selfClosing": false,
+    "description": "A searchable list of commands.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "command.input",
+    "selfClosing": true,
+    "description": "Search input for command palette.",
+    "isPro": true,
+    "props": [
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Show clear button" },
+      { "name": "closable", "type": "boolean", "default": "false", "description": "Show close button" },
+      { "name": "icon", "type": "string", "default": "'magnifying-glass'", "description": "Icon at start" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text" }
+    ]
+  },
+  {
+    "name": "command.items",
+    "selfClosing": false,
+    "description": "Container for command items.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "command.item",
+    "selfClosing": false,
+    "description": "An item in the command palette.",
+    "isPro": true,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon at start" },
+      { "name": "icon:variant", "type": "string", "default": "'outline'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon style" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut hint" }
+    ]
+  },
+  {
+    "name": "composer",
+    "selfClosing": false,
+    "description": "A configurable message input with support for action buttons and rich text.",
+    "isPro": true,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "description": "Name attribute for validation" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text" },
+      { "name": "label:sr-only", "type": "boolean", "default": "false", "description": "Visually hide label" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text" },
+      { "name": "description:sr-only", "type": "boolean", "default": "false", "description": "Visually hide description" },
+      { "name": "rows", "type": "number", "default": "null", "description": "Visible text lines" },
+      { "name": "max-rows", "type": "number", "default": "null", "description": "Maximum rows" },
+      { "name": "inline", "type": "boolean", "default": "false", "description": "Inline action buttons" },
+      { "name": "submit", "type": "string", "default": "'cmd+enter'", "values": ["cmd+enter", "enter"], "description": "Submit behavior" },
+      { "name": "variant", "type": "string", "default": "null", "values": ["input"], "description": "Visual variant" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Error styling" }
+    ]
+  },
+  {
+    "name": "context",
+    "selfClosing": false,
+    "description": "Dropdown menus that open when right clicking a designated area.",
+    "isPro": true,
+    "props": [
+      { "name": "position", "type": "string", "default": "null", "description": "Position relative to click. Format: [vertical] [horizontal]" },
+      { "name": "gap", "type": "number", "default": "null", "description": "Distance from click position" },
+      { "name": "offset", "type": "string", "default": "null", "description": "Additional offset. Format: [x] [y]" },
+      { "name": "target", "type": "string", "default": "null", "description": "ID of external menu element" },
+      { "name": "detail", "type": "string", "default": "null", "description": "Custom value for data-detail attribute" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents context menu from showing" }
+    ]
+  },
+  {
+    "name": "date-picker",
+    "selfClosing": true,
+    "description": "Allow users to select dates or date ranges via a calendar overlay.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "string", "default": "null", "description": "Selected date(s). Format: Y-m-d or Y-m-d/Y-m-d for range" },
+      { "name": "mode", "type": "string", "default": "'single'", "values": ["single", "range"], "description": "Selection mode" },
+      { "name": "min-range", "type": "number", "default": "null", "description": "Minimum number of days in range mode" },
+      { "name": "max-range", "type": "number", "default": "null", "description": "Maximum number of days in range mode" },
+      { "name": "min", "type": "string", "default": "null", "description": "Earliest selectable date. Can be date string or 'today'" },
+      { "name": "max", "type": "string", "default": "null", "description": "Latest selectable date. Can be date string or 'today'" },
+      { "name": "open-to", "type": "string", "default": "null", "description": "Date the picker opens to if no selection" },
+      { "name": "force-open-to", "type": "boolean", "default": "false", "description": "Force open to open-to date regardless of selection" },
+      { "name": "months", "type": "number", "default": "1", "description": "Number of months to display" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the date picker" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text displayed below the date picker" },
+      { "name": "description:trailing", "type": "boolean", "default": "false", "description": "Display description below instead of above" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge text displayed at the end of the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text when no date is selected" },
+      { "name": "size", "type": "string", "default": "'default'", "values": ["sm", "default", "lg", "xl", "2xl"], "description": "Size of the calendar day cells" },
+      { "name": "start-day", "type": "number", "default": "null", "description": "Day of week to start (0=Sunday to 6=Saturday)" },
+      { "name": "week-numbers", "type": "boolean", "default": "false", "description": "Display week numbers in the calendar" },
+      { "name": "selectable-header", "type": "boolean", "default": "false", "description": "Show month/year dropdowns for quick navigation" },
+      { "name": "with-today", "type": "boolean", "default": "false", "description": "Display a button to navigate to today's date" },
+      { "name": "with-inputs", "type": "boolean", "default": "false", "description": "Display date inputs for manual entry" },
+      { "name": "with-confirmation", "type": "boolean", "default": "false", "description": "Require confirmation before applying date(s)" },
+      { "name": "with-presets", "type": "boolean", "default": "false", "description": "Display preset date ranges" },
+      { "name": "presets", "type": "string", "default": "'today yesterday thisWeek last7Days thisMonth yearToDate allTime'", "description": "Space-separated list of preset date ranges" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Display a clear button when a date is selected" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" },
+      { "name": "locale", "type": "string", "default": "null", "description": "Locale for the date picker (e.g., fr, en-US, ja-JP)" }
+    ]
+  },
+  {
+    "name": "date-picker.input",
+    "selfClosing": true,
+    "description": "Input trigger for date picker.",
+    "isPro": true,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the input" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text displayed below the input" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text when no date is selected" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Display a clear button when a date is selected" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" }
+    ]
+  },
+  {
+    "name": "date-picker.button",
+    "selfClosing": false,
+    "description": "Button trigger for date picker.",
+    "isPro": true,
+    "props": [
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Text displayed when no date is selected" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "xs"], "description": "Size of the button" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Display a clear button when a date is selected" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" }
+    ]
+  },
+  {
+    "name": "dropdown",
+    "selfClosing": false,
+    "description": "A composable dropdown component for navigation menus and action menus.",
+    "isPro": false,
+    "props": [
+      { "name": "position", "type": "string", "default": "'bottom'", "values": ["top", "right", "bottom", "left"], "description": "Position" },
+      { "name": "align", "type": "string", "default": "'start'", "values": ["start", "center", "end"], "description": "Alignment" },
+      { "name": "offset", "type": "number", "default": "null", "description": "Offset from trigger" },
+      { "name": "gap", "type": "number", "default": "null", "description": "Gap between trigger and menu" },
+      { "name": "hover", "type": "boolean", "default": "false", "description": "Open on hover" }
+    ]
+  },
+  {
+    "name": "editor",
+    "selfClosing": false,
+    "description": "A basic rich text editor built using ProseMirror and Tiptap.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "string", "default": "null", "description": "Initial content for the editor" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the editor" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text displayed below the editor" },
+      { "name": "description:trailing", "type": "boolean", "default": "false", "description": "Display description below the editor instead of above" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge text displayed at the end of the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text when the editor is empty" },
+      { "name": "toolbar", "type": "string", "default": "null", "description": "Space-separated list of toolbar items. Use | for separator and ~ for spacer" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" },
+      { "name": "variant", "type": "string", "default": "null", "values": ["borderless"], "description": "Visual variant" }
+    ]
+  },
+  {
+    "name": "editor.toolbar",
+    "selfClosing": false,
+    "description": "Toolbar for the editor.",
+    "isPro": true,
+    "props": [
+      { "name": "items", "type": "string", "default": "null", "description": "Space-separated list of toolbar items to display" }
+    ]
+  },
+  {
+    "name": "editor.button",
+    "selfClosing": true,
+    "description": "Custom button for editor toolbar.",
+    "isPro": true,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display in the button" },
+      { "name": "iconVariant", "type": "string", "default": "'mini'", "values": ["mini", "micro", "outline"], "description": "The variant of the icon" },
+      { "name": "tooltip", "type": "string", "default": "null", "description": "Text to display in a tooltip when hovering" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction with the button" }
+    ]
+  },
+  {
+    "name": "editor.content",
+    "selfClosing": false,
+    "description": "Initial HTML content for the editor.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "error",
+    "selfClosing": false,
+    "description": "Error message for form validation.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "description": "The name of the field to display validation errors for" },
+      { "name": "message", "type": "string", "default": "null", "description": "Custom error message content" },
+      { "name": "bag", "type": "string", "default": "'default'", "description": "The error bag to get the error from" },
+      { "name": "deep", "type": "boolean", "default": "false", "description": "Look for validation errors in nested array fields" },
+      { "name": "icon", "type": "string", "default": "'exclamation-triangle'", "description": "The icon to display inline with the error message" }
+    ]
+  },
+  {
+    "name": "field",
+    "selfClosing": false,
+    "description": "Encapsulate input elements with labels, descriptions, and validation.",
+    "isPro": false,
+    "props": [
+      { "name": "variant", "type": "string", "default": "'block'", "values": ["block", "inline"], "description": "Visual style variant" }
+    ]
+  },
+  {
+    "name": "fieldset",
+    "selfClosing": false,
+    "description": "Group related form fields.",
+    "isPro": false,
+    "props": [
+      { "name": "legend", "type": "string", "default": "null", "description": "The fieldset's heading text" },
+      { "name": "description", "type": "string", "default": "null", "description": "Optional description text for the fieldset" }
+    ]
+  },
+  {
+    "name": "file-upload",
+    "selfClosing": false,
+    "description": "A flexible file upload component with drag-and-drop support, file previews, and Livewire integration.",
+    "isPro": true,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "description": "The input name attribute for form submissions" },
+      { "name": "multiple", "type": "boolean", "default": "false", "description": "Allow selecting and uploading multiple files" },
+      { "name": "label", "type": "string", "default": "null", "description": "Field label text displayed above the upload area" },
+      { "name": "description", "type": "string", "default": "null", "description": "Helper text displayed below the field" },
+      { "name": "error", "type": "string", "default": "null", "description": "Error message to display for validation failures" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction with the file upload" }
+    ]
+  },
+  {
+    "name": "file-upload.dropzone",
+    "selfClosing": false,
+    "description": "Dropzone area for file uploads.",
+    "isPro": true,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "Main text displayed in the dropzone area" },
+      { "name": "text", "type": "string", "default": "null", "description": "Supporting text displayed below the heading" },
+      { "name": "icon", "type": "string", "default": "'cloud-arrow-up'", "description": "Icon name to display in the dropzone" },
+      { "name": "inline", "type": "boolean", "default": "false", "description": "Display the dropzone in a compact horizontal layout" },
+      { "name": "with-progress", "type": "boolean", "default": "false", "description": "Show a progress bar during file uploads" }
+    ]
+  },
+  {
+    "name": "file-item",
+    "selfClosing": false,
+    "description": "Display an uploaded file item.",
+    "isPro": true,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "The file name or title to display" },
+      { "name": "text", "type": "string", "default": "null", "description": "Additional text to display" },
+      { "name": "image", "type": "string", "default": "null", "description": "URL or path to a preview image for the file" },
+      { "name": "size", "type": "number", "default": "null", "description": "File size in bytes. Auto-formatted to B, KB, MB, or GB" },
+      { "name": "icon", "type": "string", "default": "'document'", "description": "Icon to display when no image is provided" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Display the file item in an error state" }
+    ]
+  },
+  {
+    "name": "file-item.remove",
+    "selfClosing": true,
+    "description": "Remove button for file item.",
+    "isPro": true,
+    "props": [
+      { "name": "aria-label", "type": "string", "default": "null", "description": "The aria-label to use for the remove button" }
+    ]
+  },
+  {
+    "name": "header",
+    "selfClosing": false,
+    "description": "A full-width top navigation layout for your application.",
+    "isPro": false,
+    "props": [
+      { "name": "sticky", "type": "boolean", "default": "false", "description": "Makes the header sticky when scrolling" },
+      { "name": "container", "type": "boolean", "default": "false", "description": "Constrains the header content to a container width" }
+    ]
+  },
+  {
+    "name": "heading",
+    "selfClosing": false,
+    "description": "A consistent heading component for your application.",
+    "isPro": false,
+    "props": [
+      { "name": "size", "type": "string", "default": "'base'", "values": ["base", "lg", "xl"], "description": "Size of the heading" },
+      { "name": "level", "type": "string", "default": "null", "values": ["1", "2", "3", "4"], "description": "HTML heading level. Renders as div if not specified" },
+      { "name": "accent", "type": "boolean", "default": "false", "description": "If true, applies accent color styling to the heading" }
+    ]
+  },
+  {
+    "name": "icon",
+    "selfClosing": true,
+    "description": "Display icons from the Heroicons library.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "required": true, "description": "Name of the icon to display from Heroicons" },
+      { "name": "variant", "type": "string", "default": "'outline'", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" }
+    ]
+  },
+  {
+    "name": "input",
+    "selfClosing": true,
+    "description": "Text fields for collecting user input.",
+    "isPro": false,
+    "props": [
+      { "name": "type", "type": "string", "default": "'text'", "values": ["text", "email", "password", "file", "date", "number", "tel", "url", "search"], "description": "HTML input type" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the input" },
+      { "name": "description", "type": "string", "default": "null", "description": "Descriptive text displayed below the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text displayed when the input is empty" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "lg"], "description": "Size of the input" },
+      { "name": "variant", "type": "string", "default": "'outline'", "values": ["filled", "outline"], "description": "Visual style variant" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction with the input" },
+      { "name": "readonly", "type": "boolean", "default": "false", "description": "Makes the input read-only" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling to the input" },
+      { "name": "mask", "type": "string", "default": "null", "description": "Input mask pattern using Alpine's mask plugin" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon displayed at the start of the input" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Name of the icon displayed at the end of the input" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut hint displayed at the end of the input" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Displays a clear button when the input has content" },
+      { "name": "copyable", "type": "boolean", "default": "false", "description": "Displays a copy button to copy the input's content" },
+      { "name": "viewable", "type": "boolean", "default": "false", "description": "For password inputs, displays a toggle to show/hide the password" },
+      { "name": "as", "type": "string", "default": "'input'", "values": ["button", "input"], "description": "Render the input as a different element" }
+    ]
+  },
+  {
+    "name": "kanban",
+    "selfClosing": false,
+    "description": "A collection of cards arranged in columns, representing different stages of a workflow.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "kanban.column",
+    "selfClosing": false,
+    "description": "A column in the kanban board.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "kanban.column.header",
+    "selfClosing": false,
+    "description": "Header area of a kanban column.",
+    "isPro": true,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "The title text to display in the column header" },
+      { "name": "subheading", "type": "string", "default": "null", "description": "Optional secondary text below the header" },
+      { "name": "count", "type": "number", "default": "null", "description": "Number to display next to the heading (e.g., card count)" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge text or content to display next to the heading" }
+    ]
+  },
+  {
+    "name": "kanban.column.cards",
+    "selfClosing": false,
+    "description": "Cards container within a kanban column.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "kanban.column.footer",
+    "selfClosing": false,
+    "description": "Footer area of a kanban column.",
+    "isPro": true,
+    "props": []
+  },
+  {
+    "name": "kanban.card",
+    "selfClosing": false,
+    "description": "A card/item in the kanban board.",
+    "isPro": true,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "The title text to display in the card" },
+      { "name": "as", "type": "string", "default": "'div'", "values": ["button", "div"], "description": "Element to render the card as. 'button' makes it clickable" }
+    ]
+  },
+  {
+    "name": "label",
+    "selfClosing": false,
+    "description": "Label for form fields.",
+    "isPro": false,
+    "props": [
+      { "name": "badge", "type": "string", "default": "null", "description": "Optional text to display as a badge (e.g., 'Required', 'Optional')" }
+    ]
+  },
+  {
+    "name": "legend",
+    "selfClosing": false,
+    "description": "Legend for fieldset.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "description",
+    "selfClosing": false,
+    "description": "Descriptive text for form fields.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "menu",
+    "selfClosing": false,
+    "description": "Menu container for dropdown items.",
+    "isPro": false,
+    "props": [
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing on item click" }
+    ]
+  },
+  {
+    "name": "menu.item",
+    "selfClosing": false,
+    "description": "An item in the dropdown menu.",
+    "isPro": false,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon at start" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Icon at end" },
+      { "name": "icon:variant", "type": "string", "default": "null", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut" },
+      { "name": "suffix", "type": "string", "default": "null", "description": "Text at end" },
+      { "name": "variant", "type": "string", "default": "'default'", "values": ["default", "danger"], "description": "Item style variant" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing" }
+    ]
+  },
+  {
+    "name": "menu.submenu",
+    "selfClosing": false,
+    "description": "Submenu within a dropdown.",
+    "isPro": false,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "Submenu heading" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon at start" },
+      { "name": "icon:trailing", "type": "string", "default": "null", "description": "Icon at end" },
+      { "name": "icon:variant", "type": "string", "default": "null", "values": ["outline", "solid", "mini", "micro"], "description": "Icon variant" },
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing" }
+    ]
+  },
+  {
+    "name": "menu.separator",
+    "selfClosing": true,
+    "description": "Horizontal line separator in menu.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "menu.checkbox",
+    "selfClosing": false,
+    "description": "Checkbox item in menu.",
+    "isPro": false,
+    "props": [
+      { "name": "checked", "type": "boolean", "default": "false", "description": "Checked by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing" }
+    ]
+  },
+  {
+    "name": "menu.radio.group",
+    "selfClosing": false,
+    "description": "Radio group in menu.",
+    "isPro": false,
+    "props": [
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing" }
+    ]
+  },
+  {
+    "name": "menu.radio",
+    "selfClosing": false,
+    "description": "Radio item in menu.",
+    "isPro": false,
+    "props": [
+      { "name": "checked", "type": "boolean", "default": "false", "description": "Selected by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "keep-open", "type": "boolean", "default": "false", "description": "Prevent closing" }
+    ]
+  },
+  {
+    "name": "modal",
+    "selfClosing": false,
+    "description": "Display content in a modal dialog.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "required": true, "description": "Unique name to identify the modal" },
+      { "name": "variant", "type": "string", "default": "null", "values": ["bare"], "description": "Visual style variant" },
+      { "name": "closable", "type": "boolean", "default": "true", "description": "If false, removes the close button" }
+    ]
+  },
+  {
+    "name": "modal.trigger",
+    "selfClosing": false,
+    "description": "Trigger button to open a modal.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "required": true, "description": "Name of the modal to trigger" },
+      { "name": "shortcut", "type": "string", "default": "null", "description": "Keyboard shortcut to open the modal (e.g., 'cmd.k')" }
+    ]
+  },
+  {
+    "name": "navbar",
+    "selfClosing": false,
+    "description": "Build responsive navigation bars with dropdown menus.",
+    "isPro": false,
+    "props": [
+      { "name": "variant", "type": "string", "default": "null", "values": ["outline"], "description": "Visual style variant" }
+    ]
+  },
+  {
+    "name": "navbar.item",
+    "selfClosing": false,
+    "description": "A navigation item in the navbar.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "URL the item links to" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge content to display" },
+      { "name": "current", "type": "boolean", "default": "false", "description": "Marks the item as currently active" }
+    ]
+  },
+  {
+    "name": "navlist",
+    "selfClosing": false,
+    "description": "Build vertical navigation lists with nested groups.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "navlist.item",
+    "selfClosing": false,
+    "description": "A navigation item in the navlist.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "URL the item links to" },
+      { "name": "current", "type": "boolean", "default": "null", "description": "Applies active styling. Auto-detected based on current URL if not specified" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Name of the icon to display at the start of the item" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Content to display as a badge" },
+      { "name": "badge:color", "type": "string", "default": "null", "description": "Color of the badge" },
+      { "name": "badge:variant", "type": "string", "default": "'solid'", "values": ["solid", "outline"], "description": "Variant of the badge" }
+    ]
+  },
+  {
+    "name": "navlist.group",
+    "selfClosing": false,
+    "description": "Group navigation items together.",
+    "isPro": false,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "Text displayed as the group heading" },
+      { "name": "expandable", "type": "boolean", "default": "false", "description": "Makes the group collapsible" },
+      { "name": "expanded", "type": "boolean", "default": "true", "description": "Expands the group by default when expandable" }
+    ]
+  },
+  {
+    "name": "pagination",
+    "selfClosing": true,
+    "description": "Navigate through pages of content.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "popover",
+    "selfClosing": false,
+    "description": "Display content in a floating panel.",
+    "isPro": false,
+    "props": [
+      { "name": "position", "type": "string", "default": "'bottom'", "values": ["top", "right", "bottom", "left"], "description": "Position" },
+      { "name": "align", "type": "string", "default": "'start'", "values": ["start", "center", "end"], "description": "Alignment" },
+      { "name": "offset", "type": "number", "default": "null", "description": "Offset from trigger" },
+      { "name": "gap", "type": "number", "default": "null", "description": "Gap between trigger and popover" }
+    ]
+  },
+  {
+    "name": "profile",
+    "selfClosing": false,
+    "description": "Display a user's profile with avatar and optional name.",
+    "isPro": false,
+    "props": [
+      { "name": "avatar", "type": "string", "default": "null", "description": "URL to the avatar image" },
+      { "name": "name", "type": "string", "default": "null", "description": "User's name to display" },
+      { "name": "circle", "type": "boolean", "default": "false", "description": "Makes the avatar circular" },
+      { "name": "chevron", "type": "boolean", "default": "true", "description": "Shows a chevron indicator" }
+    ]
+  },
+  {
+    "name": "radio",
+    "selfClosing": true,
+    "description": "Radio button controls for selecting one option from many.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed next to the radio" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text below the radio" },
+      { "name": "value", "type": "string", "default": "null", "description": "Value when selected" },
+      { "name": "checked", "type": "boolean", "default": "false", "description": "Selected by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" }
+    ]
+  },
+  {
+    "name": "radio.group",
+    "selfClosing": false,
+    "description": "Group multiple radio buttons together.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label above the group" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text below the label" },
+      { "name": "variant", "type": "string", "default": "'default'", "values": ["default", "cards", "pills", "buttons"], "description": "Layout variant (cards/pills/buttons are Pro)" }
+    ]
+  },
+  {
+    "name": "select",
+    "selfClosing": false,
+    "description": "Display a dropdown menu for selecting one option from many.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the select" },
+      { "name": "description", "type": "string", "default": "null", "description": "Descriptive text displayed below the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text when no option is selected" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "lg"], "description": "Size of the select" },
+      { "name": "variant", "type": "string", "default": "'outline'", "values": ["filled", "outline", "listbox"], "description": "Visual style variant" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" },
+      { "name": "searchable", "type": "boolean", "default": "false", "description": "Allows searching through options" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Displays a clear button" },
+      { "name": "multiple", "type": "boolean", "default": "false", "description": "Allows selecting multiple options" }
+    ]
+  },
+  {
+    "name": "select.option",
+    "selfClosing": false,
+    "description": "An option in the select dropdown.",
+    "isPro": false,
+    "props": [
+      { "name": "value", "type": "string", "default": "null", "required": true, "description": "The value of the option" },
+      { "name": "selected", "type": "boolean", "default": "false", "description": "The option is selected by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "The option cannot be selected" }
+    ]
+  },
+  {
+    "name": "separator",
+    "selfClosing": true,
+    "description": "A horizontal line to separate content.",
+    "isPro": false,
+    "props": [
+      { "name": "variant", "type": "string", "default": "null", "values": ["subtle"], "description": "Visual style variant" },
+      { "name": "text", "type": "string", "default": "null", "description": "Text to display in the separator" }
+    ]
+  },
+  {
+    "name": "sidebar",
+    "selfClosing": false,
+    "description": "Use a sidebar navigation layout to keep your application content front and center.",
+    "isPro": false,
+    "props": [
+      { "name": "sticky", "type": "boolean", "default": "false", "description": "Makes the sidebar sticky when scrolling" },
+      { "name": "collapsible", "type": "string", "default": "'mobile'", "values": ["mobile", "true", "false"], "description": "Controls sidebar collapse behavior" },
+      { "name": "breakpoint", "type": "string", "default": "'1024'", "description": "Viewport breakpoint for mobile/desktop behavior" },
+      { "name": "persist", "type": "boolean", "default": "true", "description": "Save collapsed state to localStorage" }
+    ]
+  },
+  {
+    "name": "sidebar.header",
+    "selfClosing": false,
+    "description": "Header area of the sidebar.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "sidebar.brand",
+    "selfClosing": true,
+    "description": "Brand/logo area in sidebar header.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "URL to navigate to when the brand is clicked" },
+      { "name": "logo", "type": "string", "default": "null", "description": "URL or path to the logo image" },
+      { "name": "logo:dark", "type": "string", "default": "null", "description": "URL or path to the logo image for dark mode" },
+      { "name": "name", "type": "string", "default": "null", "description": "The brand name to display next to the logo" }
+    ]
+  },
+  {
+    "name": "sidebar.collapse",
+    "selfClosing": true,
+    "description": "Button to collapse the sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "inset", "type": "string", "default": "null", "description": "Positioning of the collapse button" },
+      { "name": "tooltip", "type": "string", "default": "'Toggle sidebar'", "description": "Tooltip text shown on hover" }
+    ]
+  },
+  {
+    "name": "sidebar.search",
+    "selfClosing": true,
+    "description": "Search input in the sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text for the search input" }
+    ]
+  },
+  {
+    "name": "sidebar.nav",
+    "selfClosing": false,
+    "description": "Navigation container in the sidebar.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "sidebar.item",
+    "selfClosing": false,
+    "description": "A navigation item in the sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "href", "type": "string", "default": "null", "description": "URL to navigate to when clicked" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon to display before the item text" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge value to display on the right side" },
+      { "name": "current", "type": "boolean", "default": "false", "description": "Indicates this is the currently active item" },
+      { "name": "tooltip", "type": "string", "default": "null", "description": "Tooltip text shown when sidebar is collapsed" }
+    ]
+  },
+  {
+    "name": "sidebar.group",
+    "selfClosing": false,
+    "description": "Group navigation items in the sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "heading", "type": "string", "default": "null", "description": "The heading text for the group" },
+      { "name": "expandable", "type": "boolean", "default": "false", "description": "Allows the group to be expanded/collapsed" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon to display before the group heading" },
+      { "name": "expanded", "type": "boolean", "default": "true", "description": "Controls the initial expanded state" }
+    ]
+  },
+  {
+    "name": "sidebar.spacer",
+    "selfClosing": true,
+    "description": "Flexible spacer in the sidebar.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "sidebar.profile",
+    "selfClosing": false,
+    "description": "User profile area in the sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "avatar", "type": "string", "default": "null", "description": "URL or path to the user's avatar image" },
+      { "name": "name", "type": "string", "default": "null", "description": "The user's display name" }
+    ]
+  },
+  {
+    "name": "sidebar.toggle",
+    "selfClosing": true,
+    "description": "Toggle button for mobile sidebar.",
+    "isPro": false,
+    "props": [
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon to display in the toggle button" },
+      { "name": "inset", "type": "string", "default": "null", "description": "Positioning of the toggle button" }
+    ]
+  },
+  {
+    "name": "skeleton",
+    "selfClosing": true,
+    "description": "Create placeholder content while loading data.",
+    "isPro": false,
+    "props": [
+      { "name": "animate", "type": "string", "default": "null", "values": ["shimmer", "pulse"], "description": "Animation style for the skeleton" }
+    ]
+  },
+  {
+    "name": "skeleton.line",
+    "selfClosing": true,
+    "description": "A single line skeleton placeholder.",
+    "isPro": false,
+    "props": [
+      { "name": "size", "type": "string", "default": "'base'", "values": ["base", "lg"], "description": "Size of the line" },
+      { "name": "animate", "type": "string", "default": "null", "values": ["shimmer", "pulse"], "description": "Animation style. Can be inherited from parent skeleton.group" }
+    ]
+  },
+  {
+    "name": "skeleton.group",
+    "selfClosing": false,
+    "description": "Group multiple skeleton elements with shared animation.",
+    "isPro": false,
+    "props": [
+      { "name": "animate", "type": "string", "default": "null", "values": ["shimmer", "pulse"], "description": "Animation style for all skeleton elements within the group" }
+    ]
+  },
+  {
+    "name": "slider",
+    "selfClosing": true,
+    "description": "Select a value using a horizontal slider control.",
+    "isPro": true,
+    "props": [
+      { "name": "range", "type": "boolean", "default": "false", "description": "Enables range selection" },
+      { "name": "min", "type": "number", "default": "null", "description": "Minimum value of the slider" },
+      { "name": "max", "type": "number", "default": "null", "description": "Maximum value of the slider" },
+      { "name": "step", "type": "number", "default": "null", "description": "Step size of the slider" },
+      { "name": "big-step", "type": "number", "default": "null", "description": "Step size when holding shift" },
+      { "name": "min-steps-between", "type": "number", "default": "null", "description": "Minimum distance between thumbs in number of steps" },
+      { "name": "track:class", "type": "string", "default": "null", "description": "CSS classes applied to the track" },
+      { "name": "thumb:class", "type": "string", "default": "null", "description": "CSS classes applied to the thumb" }
+    ]
+  },
+  {
+    "name": "slider.tick",
+    "selfClosing": false,
+    "description": "A tick mark on the slider.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "number", "default": "null", "description": "The value at which the tick should be displayed" }
+    ]
+  },
+  {
+    "name": "switch",
+    "selfClosing": true,
+    "description": "Toggle switches for selecting one or multiple options.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed next to the switch" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text below the switch" },
+      { "name": "checked", "type": "boolean", "default": "false", "description": "On by default" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" }
+    ]
+  },
+  {
+    "name": "table",
+    "selfClosing": false,
+    "description": "Display data in a structured table format.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "table.rows",
+    "selfClosing": false,
+    "description": "Container for table rows.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "table.row",
+    "selfClosing": false,
+    "description": "A row in the table.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "table.cell",
+    "selfClosing": false,
+    "description": "A cell in the table.",
+    "isPro": false,
+    "props": []
+  },
+  {
+    "name": "tabs",
+    "selfClosing": false,
+    "description": "Organize content into tabbed sections.",
+    "isPro": false,
+    "props": [
+      { "name": "variant", "type": "string", "default": "null", "values": ["pills", "segmented"], "description": "Visual style variant" }
+    ]
+  },
+  {
+    "name": "tabs.tab",
+    "selfClosing": false,
+    "description": "A tab button.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "required": true, "description": "Unique name for the tab" },
+      { "name": "icon", "type": "string", "default": "null", "description": "Icon to display" }
+    ]
+  },
+  {
+    "name": "tabs.panel",
+    "selfClosing": false,
+    "description": "Content panel for a tab.",
+    "isPro": false,
+    "props": [
+      { "name": "name", "type": "string", "default": "null", "required": true, "description": "Name matching the corresponding tab" }
+    ]
+  },
+  {
+    "name": "text",
+    "selfClosing": false,
+    "description": "Typography text component.",
+    "isPro": false,
+    "props": [
+      { "name": "size", "type": "string", "default": "'base'", "values": ["xs", "sm", "base", "lg"], "description": "Size of the text" }
+    ]
+  },
+  {
+    "name": "textarea",
+    "selfClosing": true,
+    "description": "Multi-line text input areas for longer form content.",
+    "isPro": false,
+    "props": [
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the textarea" },
+      { "name": "description", "type": "string", "default": "null", "description": "Descriptive text displayed below the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text" },
+      { "name": "rows", "type": "number", "default": "null", "description": "Number of visible text lines" },
+      { "name": "resize", "type": "string", "default": "null", "values": ["none", "vertical", "horizontal", "both"], "description": "Resize behavior" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents interaction" },
+      { "name": "readonly", "type": "boolean", "default": "false", "description": "Makes read-only" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" }
+    ]
+  },
+  {
+    "name": "time-picker",
+    "selfClosing": true,
+    "description": "Allow users to select specific times for scheduling events or setting appointments.",
+    "isPro": true,
+    "props": [
+      { "name": "value", "type": "string", "default": "null", "description": "Selected time(s). Format: H:i or H:i,H:i for multiple" },
+      { "name": "type", "type": "string", "default": "'button'", "values": ["input", "button"], "description": "Type of time picker" },
+      { "name": "multiple", "type": "boolean", "default": "false", "description": "Allow selecting multiple times" },
+      { "name": "time-format", "type": "string", "default": "'auto'", "values": ["auto", "12-hour", "24-hour"], "description": "Time format" },
+      { "name": "interval", "type": "number", "default": "30", "description": "Interval in minutes between displayed options" },
+      { "name": "min", "type": "string", "default": "null", "description": "Earliest selectable time. Can be time string or 'now'" },
+      { "name": "max", "type": "string", "default": "null", "description": "Latest selectable time. Can be time string or 'now'" },
+      { "name": "unavailable", "type": "string", "default": "null", "description": "Unavailable times. Comma-separated list of time strings" },
+      { "name": "open-to", "type": "string", "default": "null", "description": "Time to open the picker to. Default: selected time, or now" },
+      { "name": "label", "type": "string", "default": "null", "description": "Label text displayed above the time picker" },
+      { "name": "description", "type": "string", "default": "null", "description": "Help text displayed above the time picker" },
+      { "name": "description:trailing", "type": "boolean", "default": "false", "description": "Display description below instead of above" },
+      { "name": "badge", "type": "string", "default": "null", "description": "Badge text displayed at the end of the label" },
+      { "name": "placeholder", "type": "string", "default": "null", "description": "Placeholder text when no time is selected" },
+      { "name": "size", "type": "string", "default": "null", "values": ["sm", "xs"], "description": "Size of the time picker" },
+      { "name": "clearable", "type": "boolean", "default": "false", "description": "Display a clear button when a time is selected" },
+      { "name": "disabled", "type": "boolean", "default": "false", "description": "Prevents user interaction" },
+      { "name": "invalid", "type": "boolean", "default": "false", "description": "Applies error styling" },
+      { "name": "locale", "type": "string", "default": "null", "description": "Locale for the time picker (e.g., fr, en-US, ja-JP)" }
+    ]
+  },
+  {
+    "name": "toast",
+    "selfClosing": false,
+    "description": "Display temporary notifications with a toast.",
+    "isPro": false,
+    "props": [
+      { "name": "position", "type": "string", "default": "'bottom right'", "values": ["top left", "top center", "top right", "bottom left", "bottom center", "bottom right"], "description": "Position of the toast" }
+    ]
+  },
+  {
+    "name": "tooltip",
+    "selfClosing": false,
+    "description": "Display informative tooltips when hovering over an element.",
+    "isPro": false,
+    "props": [
+      { "name": "content", "type": "string", "default": "null", "required": true, "description": "The tooltip text to display" },
+      { "name": "position", "type": "string", "default": "'top'", "values": ["top", "right", "bottom", "left"], "description": "Position of the tooltip" },
+      { "name": "kbd", "type": "string", "default": "null", "description": "Keyboard shortcut to display in the tooltip" }
+    ]
+  }
+]

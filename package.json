@@ -1,0 +1,69 @@
+{
+  "name": "flux-ui-v2",
+  "displayName": "Flux UI v2",
+  "description": "IntelliSense for Flux UI v2.x components in Laravel Blade files",
+  "version": "1.0.0",
+  "publisher": "d3v0psdan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d3v0psdan/vscode-ext-flux-ui"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "flux",
+    "flux-ui",
+    "livewire",
+    "laravel",
+    "blade",
+    "tailwind",
+    "components",
+    "intellisense",
+    "autocomplete"
+  ],
+  "activationEvents": [
+    "onLanguage:blade",
+    "onLanguage:php",
+    "onLanguage:html"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "blade",
+        "extensions": [
+          ".blade.php"
+        ],
+        "aliases": [
+          "Blade",
+          "blade"
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "Flux UI",
+      "properties": {
+        "flux-ui.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Flux UI suggestions"
+        },
+        "flux-ui.includeProComponents": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include Flux Pro components in suggestions"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0"
+  }
+}

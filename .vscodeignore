@@ -1,0 +1,8 @@
+.vscode/**
+test-workspace/**
+scripts/**
+extraction.md
+src/get-components.js
+.gitignore
+*.vsix
+node_modules/**
